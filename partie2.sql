@@ -49,7 +49,7 @@ create table Contrat (
 );
 
 
-create table Presence (
+create table Presence ( 
     employe_presence char(8) not null,
     date_presence date not null,
     -- heure_arrivee timestamp default current_timestamp not null,
