@@ -81,12 +81,14 @@ La console doit afficher **"Connexion réussie !"** avant de commencer à coder.
 ### P1 — Gestion des Employés & Contrats
 
 **Fichiers à créer :**
+
 - `src/modeles/Employe.java`
 - `src/modeles/Contrat.java`
 - `src/menus/MenuEmploye.java`
 - `src/menus/MenuContrat.java`
 
 **Fonctionnalités à implémenter :**
+
 - Ajouter un employé
 - Modifier un employé
 - Afficher la fiche complète d'un employé (contrat, absences, congés)
@@ -94,17 +96,20 @@ La console doit afficher **"Connexion réussie !"** avant de commencer à coder.
 - Afficher les employés sans contrat actif
 
 **Rapport :**
+
 - Partie Employés et Contrats (description, captures d'écran des fonctionnalités)
 
 **Test de sa partie :**
 
 Compiler tous les fichiers :
+
 ```bash
 javac -cp ".;../lib/mysql-connector-j-9.7.0.jar" Main.java connexion/Connexion.java modeles/Employe.java modeles/Contrat.java menus/MenuEmploye.java menus/MenuContrat.java
 java -cp ".;../lib/mysql-connector-j-9.7.0.jar" Main
 ```
 
 Tester les fonctionnalités suivantes et faire des captures d'écran :
+
 1. Ajouter un nouvel employé → Vérifier dans votre outil de gestion MySQL (HeidiSQL, MySQL Workbench, phpMyAdmin, ligne de commande...) qu'il apparaît dans la table
 2. Modifier l'email d'un employé → vérifier la mise à jour
 3. Afficher la fiche d'un employé → vérifier que contrat et département s'affichent
@@ -115,12 +120,14 @@ Tester les fonctionnalités suivantes et faire des captures d'écran :
 ### P2 — Gestion des Présences & Congés
 
 **Fichiers à créer :**
+
 - `src/modeles/Presence.java`
 - `src/modeles/Conge.java`
 - `src/menus/MenuPresence.java`
 - `src/menus/MenuConge.java`
 
 **Fonctionnalités à implémenter :**
+
 - Enregistrer les présences/absences d'une journée pour un département entier
 - Afficher les présences d'un employé
 - Soumettre une demande de congé
@@ -128,17 +135,20 @@ Tester les fonctionnalités suivantes et faire des captures d'écran :
 - Afficher le solde de congés restants d'un employé
 
 **Rapport :**
+
 - Partie Présences et Congés (description, captures d'écran des fonctionnalités)
 
 **Test de sa partie :**
 
 Compiler tous les fichiers :
+
 ```bash
 javac -cp ".;../lib/mysql-connector-j-9.7.0.jar" Main.java connexion/Connexion.java modeles/Presence.java modeles/Conge.java menus/MenuPresence.java menus/MenuConge.java
 java -cp ".;../lib/mysql-connector-j-9.7.0.jar" Main
 ```
 
 Tester les fonctionnalités suivantes et faire des captures d'écran :
+
 1. Enregistrer une présence → vérifier dans votre outil de gestion MySQL (HeidiSQL, MySQL Workbench, phpMyAdmin, ligne de commande...)
 2. Enregistrer une absence → vérifier le statut
 3. Soumettre une demande de congé → vérifier le statut "demande"
@@ -150,12 +160,14 @@ Tester les fonctionnalités suivantes et faire des captures d'écran :
 ### P3 — Paie & Tableau de bord
 
 **Fichiers à créer :**
+
 - `src/modeles/Bulletin.java`
 - `src/menus/MenuBulletin.java`
 - `src/menus/MenuTableauBord.java`
 - `src/Main.java` (menu principal)
 
 **Fonctionnalités à implémenter :**
+
 - Générer un bulletin de paie (calcul automatique des retenues et salaire net)
 - Afficher les bulletins d'un employé
 - Tableau de bord : masse salariale du mois par département
@@ -163,17 +175,20 @@ Tester les fonctionnalités suivantes et faire des captures d'écran :
 - Tableau de bord : congés en attente d'approbation
 
 **Rapport :**
+
 - Partie Paie et Tableau de bord (description, captures d'écran des fonctionnalités)
 
 **Test de sa partie :**
 
 Compiler tous les fichiers :
+
 ```bash
 javac -cp ".;../lib/mysql-connector-j-9.7.0.jar" Main.java connexion/Connexion.java modeles/Bulletin.java menus/MenuBulletin.java menus/MenuTableauBord.java
 java -cp ".;../lib/mysql-connector-j-9.7.0.jar" Main
 ```
 
 Tester les fonctionnalités suivantes et faire des captures d'écran :
+
 1. Générer un bulletin → vérifier le calcul : retenues = salaire_brut × nb_absences / 22
 2. Afficher les bulletins d'un employé
 3. Tableau de bord → masse salariale du mois en cours
@@ -232,4 +247,3 @@ git push origin feature/paie-tableau-bord
 - Cliquer sur **"Create pull request"**
 
 > C'est P1 (le chef de projet) qui se chargera de merger les Pull Requests sur `main` après vérification.
-
