@@ -1,14 +1,6 @@
-<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1" pages="3">
-  <diagram id="LceHUeDSiUx3eIZ6eiIG" name="Page-1">
-    <mxGraphModel dx="786" dy="564" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
-  </diagram>
-  <diagram id="Owh-Y7R8fTysNDJIc1MK" name="Page-2">
-    <mxGraphModel dx="2036" dy="2037" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.1 Chrome/142.0.7444.265 Electron/39.8.0 Safari/537.36" version="29.6.1" pages="2">
+  <diagram id="Owh-Y7R8fTysNDJIc1MK" name="Page-1">
+    <mxGraphModel dx="1950" dy="1975" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -140,14 +132,8 @@
         <mxCell id="-PsXwA8GvL85Bq8O6W5V-55" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=13;fontStyle=3;textShadow=0;labelBorderColor=none;fillColor=#bac8d3;strokeColor=#23445d;" value="annee_bulletin" vertex="1">
           <mxGeometry height="40" width="100" x="40" y="220" as="geometry" />
         </mxCell>
-        <mxCell id="-PsXwA8GvL85Bq8O6W5V-56" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=13;fontStyle=3;textShadow=0;labelBorderColor=none;" value="nb_jours_&lt;div&gt;travailles&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="100" x="70" y="460" as="geometry" />
-        </mxCell>
         <mxCell id="-PsXwA8GvL85Bq8O6W5V-57" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=13;fontStyle=3;textShadow=0;labelBorderColor=none;" value="salaire_brut_&lt;div&gt;bulletin&lt;/div&gt;" vertex="1">
           <mxGeometry height="40" width="100" x="14" y="375" as="geometry" />
-        </mxCell>
-        <mxCell id="-PsXwA8GvL85Bq8O6W5V-58" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;fontSize=13;fontStyle=3;textShadow=0;labelBorderColor=none;" value="nb_absences_&lt;div&gt;injustifiees&lt;/div&gt;" vertex="1">
-          <mxGeometry height="40" width="100" x="-110" y="550" as="geometry" />
         </mxCell>
         <mxCell id="-PsXwA8GvL85Bq8O6W5V-68" edge="1" parent="1" source="-PsXwA8GvL85Bq8O6W5V-64" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.145;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" target="-PsXwA8GvL85Bq8O6W5V-33">
           <mxGeometry relative="1" as="geometry" />
@@ -206,12 +192,6 @@
         <mxCell id="-PsXwA8GvL85Bq8O6W5V-88" edge="1" parent="1" source="-PsXwA8GvL85Bq8O6W5V-83" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.615;entryY=0.045;entryDx=0;entryDy=0;entryPerimeter=0;elbow=vertical;" target="-PsXwA8GvL85Bq8O6W5V-52">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="-PsXwA8GvL85Bq8O6W5V-96" edge="1" parent="1" source="-PsXwA8GvL85Bq8O6W5V-91" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" target="-PsXwA8GvL85Bq8O6W5V-58">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
-        <mxCell id="-PsXwA8GvL85Bq8O6W5V-97" edge="1" parent="1" source="-PsXwA8GvL85Bq8O6W5V-91" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;elbow=vertical;" target="-PsXwA8GvL85Bq8O6W5V-56">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="-PsXwA8GvL85Bq8O6W5V-98" edge="1" parent="1" source="-PsXwA8GvL85Bq8O6W5V-91" style="edgeStyle=orthogonalEdgeStyle;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.855;exitY=0.855;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0;entryDx=0;entryDy=0;elbow=vertical;" target="-PsXwA8GvL85Bq8O6W5V-57">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
@@ -230,8 +210,8 @@
       </root>
     </mxGraphModel>
   </diagram>
-  <diagram name="Page-3" id="mmIuLv-9SQicHun-wtWa">
-    <mxGraphModel dx="2902" dy="940" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+  <diagram name="Page-2" id="mmIuLv-9SQicHun-wtWa">
+    <mxGraphModel dx="2036" dy="868" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -336,8 +316,8 @@
         <mxCell id="8BODl873xDkIhjEmQIbZ-9" edge="1" parent="1" source="LMAiOlT6n5Q7itlzEDWL-3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;elbow=vertical;endArrow=none;endFill=0;fontStyle=1;fontSize=14;" target="08wSb4W626-_BPprDy3r-14" value="1,n">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="LMAiOlT6n5Q7itlzEDWL-3" parent="1" style="shape=associativeEntity;whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;affecter&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;salaire_brut_bulletin&lt;/div&gt;&lt;div&gt;nb_jours_travaille&lt;/div&gt;&lt;div&gt;nb_absences_injustifiees&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
-          <mxGeometry height="90" width="197.5" x="452.5" y="700" as="geometry" />
+        <mxCell id="LMAiOlT6n5Q7itlzEDWL-3" parent="1" style="shape=associativeEntity;whiteSpace=wrap;html=1;align=center;" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;affecter&lt;/b&gt;&lt;/span&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;salaire_brut_bulletin&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="180" x="470" y="700" as="geometry" />
         </mxCell>
         <mxCell id="8BODl873xDkIhjEmQIbZ-5" edge="1" parent="1" source="q4Jz-kDqytFpC_o7FhUB-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;elbow=vertical;fontSize=14;fontStyle=1;endArrow=none;endFill=0;" target="08wSb4W626-_BPprDy3r-10" value="n">
           <mxGeometry relative="1" as="geometry" />
