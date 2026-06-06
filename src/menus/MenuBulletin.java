@@ -5,9 +5,8 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class MenuBulletin {
-    private static Scanner scanner = new Scanner(System.in);
 
-    public static void afficherMenu() {
+    public static void afficherMenu(Scanner scanner) {
         int choix;
         do {
             System.out.println("\n=== GESTION DES BULLETINS DE PAIE ===");
@@ -25,10 +24,10 @@ public class MenuBulletin {
 
             switch (choix) {
                 case 1:
-                    genererBulletin();
+                    genererBulletin(scanner);
                     break;
                 case 2:
-                    afficherBulletinsEmploye();
+                    afficherBulletinsEmploye(scanner);
                     break;
                 case 3:
                     System.out.println("Retour...");
@@ -39,7 +38,7 @@ public class MenuBulletin {
         } while (choix != 3);
     }
 
-    private static void genererBulletin() {
+    private static void genererBulletin(Scanner scanner) {
         System.out.print("Matricule de l'employé : ");
         String matricule = scanner.nextLine();
         System.out.print("Mois (1-12) : ");
@@ -141,7 +140,7 @@ public class MenuBulletin {
         }
     }
 
-    private static void afficherBulletinsEmploye() {
+    private static void afficherBulletinsEmploye(Scanner scanner) {
         System.out.print("Matricule de l'employé : ");
         String matricule = scanner.nextLine();
 

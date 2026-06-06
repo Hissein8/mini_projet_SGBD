@@ -25,7 +25,6 @@ public class MenuTableauBord {
 
     // 1. Masse salariale mensuelle par département (GROUP BY + SUM)
     private static void afficherMasseSalariale(Connection conn) {
-        // System.out.println("\n💰 [Masse Salariale du Mois par Département]");
         System.out.println("\n[Masse Salariale du Mois par Département]");
         String query = "SELECT d.nom_dpt AS dept_nom, SUM(b.salaire_brut) AS total_masse " +
                        "FROM Bulletin b " +
@@ -50,7 +49,6 @@ public class MenuTableauBord {
     // 2. Taux d'absentéisme par département sur les 3 derniers mois (Basé sur la requête 6 du script SQL)
     private static void afficherTauxAbsenteisme(Connection conn) {
         System.out.println("\n[Taux d'absentéisme par Département (3 derniers mois)]");
-        // System.out.println("\n📉 [Taux d'absentéisme par Département (3 derniers mois)]");
         String query = "SELECT d.nom_dpt AS dept_nom, " +
                        "ROUND((SUM(b.nb_absences_injustifiees) / SUM(b.nb_jours_travailles + b.nb_absences_injustifiees)) * 100, 2) AS taux_absenteisme " +
                        "FROM Bulletin b " +
@@ -75,7 +73,6 @@ public class MenuTableauBord {
 
     // 3. Congés en attente d'approbation
     private static void afficherCongesEnAttente(Connection conn) {
-        // System.out.println("\n📅 [Demandes de Congés en Attente d'Approbation]");
         System.out.println("\n[Demandes de Congés en Attente d'Approbation]");
         String query = "SELECT e.nom_emp, e.prenom_emp, c.date_debut_conge, c.date_fin_conge, c.type_conge " +
                        "FROM Conge c " +
@@ -91,7 +88,6 @@ public class MenuTableauBord {
                         rs.getString("prenom_emp"), rs.getString("nom_emp"),
                         rs.getDate("date_debut_conge"), rs.getDate("date_fin_conge"), rs.getString("type_conge"));
             }
-            // if (!data) System.out.println("   🎉 Aucune demande de congé en attente.");
             if (!data) System.out.println("   Aucune demande de congé en attente.");
         } catch (SQLException e) {
             System.out.println("   Erreur requete congés en attente : " + e.getMessage());

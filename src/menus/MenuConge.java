@@ -6,9 +6,8 @@ import java.util.Scanner;
 import modeles.TypeConge;
 
 public class MenuConge {
-    private Scanner scanner = new Scanner(System.in);
 
-    public void afficherMenu() {
+    public static void afficherMenu(Scanner scanner) {
         int choix = -1;
         while (choix != 0) {
             System.out.println("\n===== MENU CONGÉS =====");
@@ -20,16 +19,16 @@ public class MenuConge {
             choix = Integer.parseInt(scanner.nextLine());
 
             switch (choix) {
-                case 1: soumettreDemandeConge(); break;
-                case 2: traiterDemandeConge(); break;
-                case 3: afficherSoldeConges(); break;
+                case 1: soumettreDemandeConge(scanner); break;
+                case 2: traiterDemandeConge(scanner); break;
+                case 3: afficherSoldeConges(scanner); break;
                 case 0: System.out.println("Retour au menu principal..."); break;
                 default: System.out.println("Choix invalide.");
             }
         }
     }
 
-    private void soumettreDemandeConge() {
+    private static void soumettreDemandeConge(Scanner scanner) {
         try (Connection conn = Connexion.getConnexion()) {
             System.out.print("Matricule de l'employé : ");
             String matricule = scanner.nextLine().toUpperCase();
@@ -41,7 +40,7 @@ public class MenuConge {
             ResultSet rsCheck = psCheck.executeQuery();
             rsCheck.next();
             if (rsCheck.getInt(1) == 0) {
-                System.out.println("❌ Employé introuvable.");
+                System.out.println("Employé introuvable.");
                 return;
             }
 
@@ -61,7 +60,7 @@ public class MenuConge {
                 case 2: type = TypeConge.maladie; break;
                 case 3: type = TypeConge.maternite; break;
                 default:
-                System.out.println("❌ Choix invalide, annuel par défaut.");
+                System.out.println("Choix invalide, annuel par défaut.");
                 type = TypeConge.annuel;
             }
 
@@ -74,14 +73,14 @@ public class MenuConge {
             ps.setString(4, type.name());
             ps.executeUpdate();
 
-            System.out.println("✔ Demande de congé soumise avec succès (statut : demande).");
+            System.out.println("Demande de congé soumise avec succès (statut : demande).");
 
         } catch (SQLException e) {
             System.out.println("Erreur SQL : " + e.getMessage());
         }
     }
 
-    private void traiterDemandeConge() {
+    private static void traiterDemandeConge(Scanner scanner) {
         try (Connection conn = Connexion.getConnexion()) {
 
             // Afficher les demandes en attente
@@ -115,7 +114,7 @@ public class MenuConge {
             String decision = scanner.nextLine().toLowerCase();
 
             if (!decision.equals("approuve") && !decision.equals("refuse")) {
-                System.out.println("❌ Décision invalide. Tapez 'approuve' ou 'refuse'.");
+                System.out.println("Décision invalide. Tapez 'approuve' ou 'refuse'.");
                 return;
             }
 
@@ -130,7 +129,7 @@ public class MenuConge {
             if (rows > 0) {
                 System.out.println("✔ Congé " + decision + " avec succès.");
             } else {
-                System.out.println("❌ Aucune demande trouvée pour ces informations.");
+                System.out.println("Aucune demande trouvée pour ces informations.");
             }
 
         } catch (SQLException e) {
@@ -138,7 +137,7 @@ public class MenuConge {
         }
     }
 
-    private void afficherSoldeConges() {
+    private static void afficherSoldeConges(Scanner scanner) {
         try (Connection conn = Connexion.getConnexion()) {
             System.out.print("Matricule de l'employé : ");
             String matricule = scanner.nextLine().toUpperCase();
@@ -150,7 +149,7 @@ public class MenuConge {
             ResultSet checkRs = checkPs.executeQuery();
 
             if (!checkRs.next()) {
-                System.out.println("❌ Employé introuvable.");
+                System.out.println("Employé introuvable.");
                 return;
             }
 

@@ -6,9 +6,8 @@ import java.util.Scanner;
 import modeles.StatutPresence;
 
 public class MenuPresence {
-    private Scanner scanner = new Scanner(System.in);
 
-    public void afficherMenu() {
+    public static void afficherMenu(Scanner scanner) {
         int choix = -1;
         while (choix != 0) {
             System.out.println("\n===== MENUPRESENCES =====");
@@ -19,15 +18,15 @@ public class MenuPresence {
             choix = Integer.parseInt(scanner.nextLine());
 
             switch (choix) {
-                case 1: enregistrerPresencesDepartement(); break;
-                case 2: afficherPresencesEmploye(); break;
+                case 1: enregistrerPresencesDepartement(scanner); break;
+                case 2: afficherPresencesEmploye(scanner); break;
                 case 0: System.out.println("Retour au menu principal..."); break;
                 default: System.out.println("Choix invalide.");
             }
         }
     }
 
-    private void enregistrerPresencesDepartement() {
+    private static void enregistrerPresencesDepartement(Scanner scanner) {
         try (Connection conn = Connexion.getConnexion()) {
             System.out.print("Code département (RH, IT, FIN, MAR) : ");
             String codeDpt = scanner.nextLine().toUpperCase();
@@ -58,7 +57,7 @@ public class MenuPresence {
                     case 2: statut = StatutPresence.absent; break;
                     case 3: statut = StatutPresence.conge; break;
                     default:
-                    System.out.println("❌ Choix invalide, absent par défaut.");
+                    System.out.println("Choix invalide, absent par défaut.");
                     statut = StatutPresence.absent;
                 }
 
@@ -93,17 +92,17 @@ public class MenuPresence {
                 insertPs.setString(4, heureDepart);
                 insertPs.setString(5, statut.name());
                 insertPs.executeUpdate();
-                System.out.println("✔ Présence enregistrée.");
+                System.out.println("Présence enregistrée.");
             }
 
-            System.out.println("\n✔ Toutes les présences du département ont été enregistrées.");
+            System.out.println("\nToutes les présences du département ont été enregistrées.");
 
         } catch (SQLException e) {
             System.out.println("Erreur SQL : " + e.getMessage());
         }
     }
 
-    private void afficherPresencesEmploye() {
+    private static void afficherPresencesEmploye(Scanner scanner) {
         try (Connection conn = Connexion.getConnexion()) {
             System.out.print("Matricule de l'employé : ");
             String matricule = scanner.nextLine().toUpperCase();
